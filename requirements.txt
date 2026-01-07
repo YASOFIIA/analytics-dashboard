@@ -5,3 +5,7 @@ pymysql
 jinja2
 requests
 pytest
+SQLAlchemy
+PyMySQL
+cryptography
+python-dotenv
