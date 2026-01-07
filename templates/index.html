@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Analytics Dashboard</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Plotly -->
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+
+  <!-- JS -->
+  <script src="/static/script.js" defer></script>
+</head>
+
+<body class="bg-light">
+<div class="container py-4">
+
+  <h2 class="mb-1">Analytics Dashboard</h2>
+  <p class="text-secondary mb-4">Charts built from REST APIs + NBP API</p>
+
+  <h5 class="mb-3 text-secondary">Custom REST APIs (MySQL)</h5>
+
+  <div class="row g-3">
+    <div class="col-12 col-lg-6">
+      <div class="card">
+        <div class="card-header">Monthly Sales (Bar)</div>
+        <div id="bar1" style="height:340px;"></div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6">
+      <div class="card">
+        <div class="card-header">Traffic Sources (Pie)</div>
+        <div id="pie1" style="height:340px;"></div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6">
+      <div class="card">
+        <div class="card-header">Weekly Temperature (Bar)</div>
+        <div id="bar2" style="height:340px;"></div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6">
+      <div class="card">
+        <div class="card-header">Product Stock (Pie)</div>
+        <div id="pie2" style="height:340px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <h5 class="mt-5 mb-3 text-secondary">NBP Exchange Rates (Online API)</h5>
+
+  <div class="row g-3">
+    <div class="col-12 col-lg-6">
+      <div class="card">
+        <div class="card-header">USD – Last 20 Quotes</div>
+        <div id="lineUsd" style="height:340px;"></div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6">
+      <div class="card">
+        <div class="card-header">CHF – Last 20 Quotes</div>
+        <div id="lineChf" style="height:340px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="text-center text-secondary mt-5 mb-0">
+    FastAPI · MySQL · Plotly · Bootstrap
+  </p>
+
+</div>
+</body>
+</html>
